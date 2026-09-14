@@ -1,0 +1,15 @@
+SELECT 'raw_movies' AS table_name, COUNT(*) AS row_count FROM MOVIELENS.RAW.RAW_MOVIES
+UNION ALL
+SELECT 'raw_ratings', COUNT(*) FROM MOVIELENS.RAW.RAW_RATINGS
+UNION ALL
+SELECT 'raw_tags', COUNT(*) FROM MOVIELENS.RAW.RAW_TAGS
+UNION ALL
+SELECT 'raw_links', COUNT(*) FROM MOVIELENS.RAW.RAW_LINKS
+UNION ALL
+SELECT 'raw_genome_tags', COUNT(*) FROM MOVIELENS.RAW.RAW_GENOME_TAGS
+UNION ALL
+SELECT 'raw_genome_scores', COUNT(*) FROM MOVIELENS.RAW.RAW_GENOME_SCORES;
+
+Match with GitBash:
+wc -l < "C:\Users\letus\DbtAutomation\ml-20m\genome-scores.csv"
+11709769
