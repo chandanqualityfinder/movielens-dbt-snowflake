@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_movies
+    columns:
+      - name: movie_id
+        data_tests:
+          - not_null
+          - unique
+
+  - name: stg_ratings
+    columns:
+      - name: user_id
+        data_tests:
+          - not_null
+      - name: movie_id
+        data_tests:
+          - not_null
+      - name: rating
+        data_tests:
+          - not_null
+
+  - name: stg_tags
+    columns:
+      - name: user_id
+        data_tests:
+          - not_null
+      - name: movie_id
+        data_tests:
+          - not_null
+      # no unique test here — tags can legitimately repeat, same as check_structure_tags
+
+  - name: stg_genome_scores
+    columns:
+      - name: movie_id
+        data_tests:
+          - not_null
+      - name: tag_id
+        data_tests:
+          - not_null
+
+  - name: stg_genome_tags
+    columns:
+      - name: tag_id
+        data_tests:
+          - not_null
+          - unique
+      - name: tag
+        data_tests:
+          - not_null
+
+  - name: stg_links
+    columns:
+      - name: movie_id
+        data_tests:
+          - not_null
+          - unique
