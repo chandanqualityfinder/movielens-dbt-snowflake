@@ -11,3 +11,4 @@ sources:
       - name: raw_links
       - name: raw_genome_tags
       - name: raw_genome_scores
+      - name: raw_movies_release_dates
